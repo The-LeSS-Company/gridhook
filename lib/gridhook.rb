@@ -5,6 +5,7 @@ require 'action_dispatch'
 require 'gridhook/engine'
 require 'gridhook/config'
 require 'gridhook/event'
+require 'gridhook/spam_message'
 require 'gridhook/errors'
 require 'gridhook/version'
 
