@@ -5,7 +5,7 @@ module Gridhook
       head :ok
     end
 
-    def create
+    def spam_message
       Gridhook::SpamMessage.process(params)
       head :ok
     end
