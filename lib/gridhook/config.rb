@@ -11,7 +11,7 @@ module Gridhook
   end
 
   # This class handles storing Gridhooks configuration variables.
-  class Config < Struct.new(:event_processor, :event_receive_path, :spam_message_path)
+  class Config < Struct.new(:event_processor, :spam_message_processor, :event_receive_path, :spam_message_path)
   end
 
 end
