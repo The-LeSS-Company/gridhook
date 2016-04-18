@@ -8,7 +8,7 @@ unless Object.const_defined? 'Gridhook'
   require 'gridhook'
 end
 
-class TestCase < MiniTest::Unit::TestCase
+class TestCase < Minitest::Test
   def self.test(name, &block)
     define_method("test_#{name.gsub(/\W/, '_')}", &block) if block
   end

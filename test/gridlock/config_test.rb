@@ -6,7 +6,6 @@ class ConfigTest < TestCase
   end
 
   test 'configure block' do
-    assert_nil @config.event_processor
     Gridhook.configure do |config|
       config.event_processor = proc { }
     end
