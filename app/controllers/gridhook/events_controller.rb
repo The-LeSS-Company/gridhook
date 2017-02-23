@@ -14,7 +14,7 @@ module Gridhook
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.permit(:email, :event, :reason, :status, :_json => [:email, :event, :reason, :status])
+      params.permit(:email, :event, :reason, :status, :"smtp-id", :_json => [:email, :event, :reason, :"smtp-id", :status])
     end
   end
 end

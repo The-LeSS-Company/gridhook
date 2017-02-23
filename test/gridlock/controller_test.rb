@@ -30,6 +30,7 @@ class ControllerTest < ActionDispatch::IntegrationTest
   test "should create correct event with json" do
     post spam_url, params: {"_json"=>[{"email"=>"a@b.com", "smtp-id"=>"<32eafb51-b35a-410b-a8cb-834ba896c563@less.works>", "timestamp"=>1484881350, "sg_event_id"=>"c6aq-1VBSS27Je8rMbSuCA", "sg_message_id"=>"filter0148p1las1-7202-58817DC6-9.0", "reason"=>"Bounced Address", "event"=>"dropped"}], "event"=>{"_json"=>[{"email"=>"a@b.com", "smtp-id"=>"<32eafb51-b35a-410b-a8cb-834ba896c563@less.works>", "timestamp"=>1484881350, "sg_event_id"=>"c6aq-1VBSS27Je8rMbSuCA", "sg_message_id"=>"filter0148p1las1-7202-58817DC6-9.0", "reason"=>"Bounced Address", "event"=>"dropped"}]}}
     assert_equal @event[:email], 'a@b.com'
+    assert_equal @event[:"smtp-id"], '<32eafb51-b35a-410b-a8cb-834ba896c563@less.works>'
   end
 
 end
